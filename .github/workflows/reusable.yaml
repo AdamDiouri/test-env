@@ -14,4 +14,4 @@ jobs:
 
         steps:
             - run: |
-                echo ${{inputs.ENVIRONMENT}}
+                echo ${{secrets.name}}
