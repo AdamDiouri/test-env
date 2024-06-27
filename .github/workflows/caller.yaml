@@ -7,6 +7,6 @@ on:
 
 jobs:
     some-job:
-        uses: .github/workflows/reusable.yml
+        uses: ./.github/workflows/reusable.yaml
         with:
             ENVIRONMENT: myenv
