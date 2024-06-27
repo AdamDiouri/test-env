@@ -1,0 +1,12 @@
+name: Workflow Caller
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    some-job:
+        uses: ./.github/workflows/reusable.yml
+        with:
+            ENVIRONMENT: myenv

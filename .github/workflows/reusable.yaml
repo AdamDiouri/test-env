@@ -1,12 +1,16 @@
-name: Workflow Caller
+name: Reusable workflow
 
 on:
-    push:
-        branches:
-            - main
-
+    workflow_call:
+        inputs:
+            ENVIRONMENT:
+                required: true
+                type: string    
+                        
 jobs:
     some-job:
-        uses: ./.github/workflows/workflow.yml
-        with:
-            ENVIRONMENT: myenv
+        runs-on: ubuntu-latest
+        environment: ${{ inputs.ENVIRONMENT }}
+
+        steps:
+            - run: env
