@@ -4,8 +4,11 @@ on:
     workflow_call:
         inputs:
             ENVIRONMENT:
-                required: true
-                type: string    
+                required: false
+                type: string
+        secrets:
+            NAME:
+                required: false
                         
 jobs:
     some-job:

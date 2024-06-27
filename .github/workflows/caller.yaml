@@ -10,3 +10,5 @@ jobs:
         uses: ./.github/workflows/reusable.yaml
         with:
             ENVIRONMENT: myenv
+        secrets:
+            NAME: ${{ secrets.NAME }}
