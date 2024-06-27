@@ -14,4 +14,4 @@ jobs:
 
         steps:
             - run: |
-                echo ${{secrets.name}}
+                echo ${{secrets.NAME}}
